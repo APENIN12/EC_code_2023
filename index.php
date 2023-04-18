@@ -5,6 +5,7 @@ date_default_timezone_set('Europe/Paris');
 require_once('controller/conversationController.php');
 require_once('controller/friendController.php');
 require_once('controller/loginController.php');
+require_once('controller/signinController.php');
 
 if (isset($_GET['action'])) {
     switch ($_GET['action']) {
@@ -16,13 +17,11 @@ if (isset($_GET['action'])) {
             }
             break;
 
-            // case 'signin':
-            //     if (!empty($_POST)) {
-            //         signin($_POST);
-            //     } else {
-            //         signinpage();
-            //     }
-            //     break;
+            case 'signin':
+                if (!empty($_POST)) {
+                    addNewUser($_POST);
+                }
+                break;
 
         case 'logout':
             logout();

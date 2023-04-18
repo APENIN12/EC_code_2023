@@ -197,4 +197,25 @@ class User
 
         return $id;
     }
+
+    // ****** APE : create a new user in the Database ****** ///
+    public static function newUser($user_name, $user_password, $user_email)
+    {
+        // Open database connection
+        $db = init_db();
+
+        $req = $db->prepare("INSERT INTO users(users.email, users.username, users.password) VALUES (?,?,?);");
+        $req->execute([
+            $user_email,
+            $user_name,
+            $user_password
+        ]);
+
+        $id = $db->lastInsertId();
+        // Close database connection
+        $db = null;
+
+        return $id;
+    }
+    // ****** END - APE : create a new user in the Database ****** ///
 }

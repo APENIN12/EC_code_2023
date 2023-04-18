@@ -7,7 +7,7 @@
             <h3>Sign in !
             </h3>
             <p class="text-muted"> Please sign in ! </p> 
-            <form action="/controller/signinController.php" method="post">
+            <form action="/index.php?action=signin" method="post">
                 <div class="mb-3">
                     <label for="pseudo" class="form-label text-muted small text-uppercase">pseudo</label>
                     <input type="text" class="form-control" id="email" name="pseudo"required />
