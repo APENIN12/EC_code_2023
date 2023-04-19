@@ -31,7 +31,6 @@ if (isset($_GET['action'])) {
             } 
             break; 
         
-
         case 'conversation':
             conversationPage();
             break;

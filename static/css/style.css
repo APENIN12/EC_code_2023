@@ -10,7 +10,7 @@ html, body {
 .auth-container {
     align-items: center;
     flex-direction: column;
-    background-color: #facdf7 !important;
+    background-color: #ffa1f9 !important;
 
     border-radius: 10px 10px 10px 10px;
     position: relative;
