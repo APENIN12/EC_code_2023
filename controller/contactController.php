@@ -1,9 +1,7 @@
 <?php
 require_once('model/contact.php');
 
-class ContactController
-{
-    public function submit($post)
+    function sendContactDemand($post)
     {
         //if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'];
@@ -11,19 +9,13 @@ class ContactController
             $subject = $_POST['subject'];
             $message = $_POST['message'];
 
-            // // $contactModel = new ContactModel();
-            // $contactModel->saveContact($name, $email, $subject, $message);
+            //send an email 
+            $to = 'contact@discoding.com';
+            $subject = 'Nouveau message de contact';
+            $body = "+1 user demand ";
+            $headers = "From: $email";
+            mail($to, $subject, $body, $headers);
 
-            // $to = 'contact@discoding.com';
-            // $subject = 'Nouveau message de contact';
-            // $body = "Nom : $name\n";
-            // $body .= "E-mail : $email\n";
-            // $body .= "Sujet : $subject\n";
-            // $body .= "Message :\n$message";
-            // $headers = "From: $email";
-
-            // mail($to, $subject, $body, $headers);
-            $user_data = ContactModel::saveContact($name, $email, $subject, $message);
+            $user_data = Contact::messageContact($name, $email, $subject, $message);
         
     }
-}

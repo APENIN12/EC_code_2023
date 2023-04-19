@@ -16,7 +16,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label small text-uppercase" for="subject">Subject </label>
-                        <input class="form-control" type="text" name="message" required>
+                        <input class="form-control" type="text" name="subject" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label small text-uppercase" for="message">Your message </label>

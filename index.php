@@ -41,7 +41,7 @@ if (isset($_GET['action'])) {
 
         case 'contact':
             if (!empty($_POST)) {
-                submit($_POST);
+                sendContactDemand($_POST);
             }
             break;
     }
