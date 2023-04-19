@@ -38,9 +38,11 @@
                                 <div class="text-muted fs-6">
                                     <?= $message['created_at'] ?>
                                 </div>
-                                <div class="delete" style="color:white;margin-left:2%;width:10px;">
-                                X
-                                </div>
+                
+                                <form action="" method="post">
+                                    <input type="hidden" name="messageId" value="<?= $message['id'] ?>">
+                                    <button type="submit" class="delete" style="color:white;margin-left:2%;width:10px;background: transparent;" >X</button>
+                                </form>
                             </div>
                             <div class="card-text">
                                 <?= $message['content'] ?>
@@ -66,6 +68,14 @@
 
 <script src="/static/js/page_conversation_detail.js"></script>
 
+<?php
+if(isset($_POST['messageId'])) {
+    $messageId = $_POST['messageId'];
+    deleteMessage($messageId);
+}
+?>
+
 <?php $content = ob_get_clean(); ?>
 <?php require('base.php'); ?>
 <?php require('logout.php'); ?>
+

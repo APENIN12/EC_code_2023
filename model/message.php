@@ -120,4 +120,11 @@ class Message
         return $message;
     }
 
+    public static function deleteMessage($id)
+    {
+        $db = init_db();
+        $req = $db->prepare("DELETE FROM messages WHERE id = ?");
+        $req->execute([$id]);
+        $db = null;
+    }
 }

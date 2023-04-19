@@ -74,3 +74,10 @@ function addMessage($user_id)
 
     header('Location: /index.php?action=conversation&sub_action=detail&conversation_id=' . $conversation_id);
 }
+
+function deleteMessage($idMessage)
+{
+    $conversation_id = $_GET['conversation_id'];
+    Message::deleteMessage($idMessage);
+    header('Location: /index.php?action=conversation&sub_action=detail&conversation_id=' . $conversation_id);
+}
