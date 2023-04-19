@@ -198,17 +198,25 @@ class User
 
         return $id;
     }
-    public static function addNewUser($a,$b,$c)
+    public static function addNewUser($userEmail,$userName,$userPassword)
     {
         // Open database connection
         $db = init_db();
 
-        $statement = $db->prepare("INSERT INTO users(users.email, users.username, users.password) VALUES (?,?,?);");
-        $statement->execute([$a,$b,$c]);
+        //method to check if a user with a same email adress exists
+        $statement = $db->prepare("SELECT * FROM users WHERE email = ?");
+        $statement->execute([$userEmail]);
 
-        
+        $userAlreadyExists = $statement->fetch();
+        // if user already exists, return 0
+        if (!empty($userAlreadyExists)) {
+            $id = false;
+        } else {
+            $statement = $db->prepare("INSERT INTO users(users.email, users.username, users.password) VALUES (?,?,?);");
+            $statement->execute([$userEmail,$userName,$userPassword]);
+            $id = $db->lastInsertId();
+        };
 
-        $id = $db->lastInsertId();
         // Close database connection
         $db = null;
 
