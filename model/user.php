@@ -157,6 +157,7 @@ class User
 
         return $req->fetch();
     }
+    
 
 
     public static function isAlreadyFriend($user_id, $friend_id)
@@ -197,19 +198,15 @@ class User
 
         return $id;
     }
-
-    // ****** APE : create a new user in the Database ****** ///
-    public static function newUser($user_name, $user_password, $user_email)
+    public static function addNewUser($a,$b,$c)
     {
         // Open database connection
         $db = init_db();
 
-        $req = $db->prepare("INSERT INTO users(users.email, users.username, users.password) VALUES (?,?,?);");
-        $req->execute([
-            $user_email,
-            $user_name,
-            $user_password
-        ]);
+        $statement = $db->prepare("INSERT INTO users(users.email, users.username, users.password) VALUES (?,?,?);");
+        $statement->execute([$a,$b,$c]);
+
+        
 
         $id = $db->lastInsertId();
         // Close database connection
@@ -217,5 +214,5 @@ class User
 
         return $id;
     }
-    // ****** END - APE : create a new user in the Database ****** ///
+
 }

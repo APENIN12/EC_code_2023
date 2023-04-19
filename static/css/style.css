@@ -10,12 +10,12 @@ html, body {
 .auth-container {
     align-items: center;
     flex-direction: column;
-    background-color: #36393f;
+    background-color: #facdf7 !important;
 
     border-radius: 10px 10px 10px 10px;
     position: relative;
     padding: 40px;
-    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 60px 0 rgba(250, 255, 222, 0.3) !important;
 }
 
 .friends-list a {

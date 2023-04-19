@@ -14,16 +14,10 @@ function init_db()
         $user = $_ENV['DISCODING_DB_USER'] ?? 'root';
         $password = $_ENV['DISCODING_DB_PASSWORD'] ?? 'root';
 
-        // $db = new PDO("mysql:host=$host;dbname=$dbname;charset=$charset",
-        //     $user,
-        //     $password,
-        //     [PDO::MYSQL_ATTR_INIT_COMMAND => "SET time_zone = 'Europe/Paris'"]);
-
-    
         $db = new PDO("mysql:host=$host;dbname=$dbname;charset=$charset",
-            $user,
-            $password,
-            []);
+        $user,
+        $password,
+        []);
 
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());

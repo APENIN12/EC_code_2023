@@ -5,4 +5,4 @@
         <a href="/index.php?action=logout" class="btn btn-success">Log out</a>
         </btn>
     </div>
-    </div>
+   

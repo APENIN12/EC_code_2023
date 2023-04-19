@@ -1,4 +1,4 @@
- <?php //ob_start(); ?> 
+<?php ob_start(); ?>
 <div class="col-sm-6 col-md-3 friends-list">
 
     <ul class="list-group mt-3 mb-3">

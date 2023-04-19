@@ -1,10 +1,5 @@
-<?php ob_start(); 
+<?php ob_start(); ?>
 
-
-
-?>
-
-<!-- login page -->
 <div class="container-fluid d-flex h-100 characterBackground">
     <div class="row align-self-center w-100">
         <div class="col-4 mx-auto auth-container">
@@ -26,17 +21,15 @@
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary btn-lg btn-block w-100">Login</button>
                 </div>
-
             </form>
             <div class="mb-3">
-                <a href="view/signin.php" class="btn btn-primary btn-lg btn-block w-100">Sign in</a>
-                <a href="../view/contactUs.php">Contact Us</a>
+                <a href="view/signon.php" class="btn btn-primary btn-lg btn-block w-100">Sign on</a>
+                <a href="view/contactView.php">Contact Us</a>
 
             </div>
         </div>
     </div>
 </div>
 
-<?php $content = ob_get_clean(); ?> 
-
+<?php $content = ob_get_clean(); ?>
 <?php require( __DIR__ . '/base.php'); ?>

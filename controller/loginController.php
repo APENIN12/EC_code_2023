@@ -24,7 +24,8 @@ function login($post)
 
     $email = $post['email'];
     $password = $post['password'];
-    $user_data = User::getUserByCredentials($email, $password);
+    $passwordcode = hash('sha256', $password);
+    $user_data = User::getUserByCredentials($email, $passwordcode);
 
     if ($user_data == null) {
         $error_msg = "Email ou mot de passe incorrect";
@@ -36,17 +37,6 @@ function login($post)
     $_SESSION['user_id'] = $user_data['id'];
     $user_id = $_SESSION['user_id'] ?? false;
     header('location: index.php ');
-
-    // if (password_verify($password, $user_data['password'])) {
-    //     // Password is correct, set session
-    //     $_SESSION['user_id'] = $user_data['id'];
-    //     header('location: index.php');
-    //     return;
-    // } else {
-    //     $error_msg = "Email ou mot de passe incorrect";
-    //     require('view/loginView.php');
-    //     return;
-    // }
 }
 
 /****************************

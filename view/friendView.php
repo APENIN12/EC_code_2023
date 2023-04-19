@@ -11,8 +11,6 @@
                 </div>
                 <div class="col-2 align-self-center d-flex justify-content-end">
                     <a href="/index.php?action=friend&sub_action=add_friend" class="btn btn-success">Add a Friend</a>
-                    <!-- Log out : button -->
-                    <!-- <a href="/index.php?action=logout" class="btn btn-success">Log out</a> -->
                     </btn>
                 </div>
             </div>
@@ -43,5 +41,4 @@
 </div>
 
 <?php $content = ob_get_clean(); ?>
-<?php require('logout.php'); ?>
 <?php require('base.php'); ?>

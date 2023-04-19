@@ -1,4 +1,4 @@
-<?php //ob_start(); ?> 
+<?php ob_start(); ?>
 
 <div class="container-fluid">
     <div class="row">
@@ -38,7 +38,9 @@
                                 <div class="text-muted fs-6">
                                     <?= $message['created_at'] ?>
                                 </div>
-                                <div style="color:white; margin-left:2%; background-color:red; width:10px;">X</div> 
+                                <div class="delete" style="color:white;margin-left:2%;width:10px;">
+                                X
+                                </div>
                             </div>
                             <div class="card-text">
                                 <?= $message['content'] ?>
@@ -66,3 +68,4 @@
 
 <?php $content = ob_get_clean(); ?>
 <?php require('base.php'); ?>
+<?php require('logout.php'); ?>
