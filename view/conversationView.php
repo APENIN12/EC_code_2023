@@ -8,10 +8,7 @@
         <div class="col-sm-6 col-md-9 mt-2">
             <div class="row m-auto">
                 <h3><?= $interlocutor['username'] ?></h3>
-
-                <?php foreach ($messages
-
-                               as $message):
+                <?php foreach ($messages as $message):
                     if ($message['user_id'] == $user_id) {
                         $msgUser = $user;
                     } else {

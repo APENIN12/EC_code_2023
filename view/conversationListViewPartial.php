@@ -12,7 +12,7 @@
         <?php foreach ($conversations as $conv) : ?>
             <li class="list-group-item border-0">
                 <a href="/index.php?action=conversation&sub_action=detail&conversation_id=<?= $conv['id']; ?>"
-                   class="list-group-item list-group-item-action border-0">
+                    class="list-group-item list-group-item-action border-0">
                     <?php
                     if ($conv['interlocutor_avatar_url']) {
                         $avatarUrl = $conv['interlocutor_avatar_url'];
