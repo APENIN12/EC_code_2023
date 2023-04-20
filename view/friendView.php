@@ -41,6 +41,7 @@
 </div>
 
 <?php $content = ob_get_clean(); ?>
+<?php require('searchbar.php'); ?>
 <?php require('logout.php'); ?>
 <?php require('base.php'); ?>
 

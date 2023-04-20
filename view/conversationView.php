@@ -39,7 +39,7 @@
                                     <?= $message['created_at'] ?>
                                 </div>
                 
-                                <form action="" method="post">
+                                <form action="" method="post" onsubmit="return confirm('Are you sure you want to delete this message?')">
                                     <input type="hidden" name="messageId" value="<?= $message['id'] ?>">
                                     <button type="submit" class="delete" style="color:white;margin-left:2%;width:10px;background: transparent;" >X</button>
                                 </form>

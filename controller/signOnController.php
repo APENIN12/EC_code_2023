@@ -14,7 +14,7 @@ $password = $_POST['password'];
 $hashpassword = hash('sha256', $password);
 
 //We create a unique username by combining the '#' symbol with unique elements such as numbers or letters
-$hash = substr(hash('md5',$pseudo), -4); //
+$hash = substr(hash('md5',$pseudo), -4);
 $newpseudo= $pseudo.'#'.$hash;
 
 //we call the model with the function addNewUser : return false OR id 
