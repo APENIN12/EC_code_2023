@@ -20,6 +20,10 @@ if (isset($_GET['action'])) {
             }
             break;
 
+            case 'previous':
+                previous();
+                break;
+
         case 'logout':
             logout();
             break;
@@ -44,7 +48,23 @@ if (isset($_GET['action'])) {
                 sendContactDemand($_POST);
             }
             break;
+        
+        case 'contactForm':
+            contactForm();
+            break;
+        
+        case 'signIn':
+            signIn();
+            break;
+
+        case 'createAServer':
+            createAServer();
+            break;
+
+            
     }
+   
+ 
 } else {
     $user_id = $_SESSION['user_id'] ?? false;
 

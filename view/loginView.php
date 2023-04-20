@@ -23,10 +23,11 @@
                 </div>
             </form>
             <div class="mb-3">
-                <a href="view/signInForm.php" class="btn btn-warning btn-lg btn-block w-100 mt-5">Join Us!</a>
-                <a href="view/contactForm.php" class="btn btn-warning btn-lg btn-block w-100 mt-2">Contact Us</a>
+                <a href="/index.php?action=signIn" class="btn btn-warning btn-lg btn-block w-100 mt-5">Join Us!</a>
+                <a href="/index.php?action=contactForm" class="btn btn-warning btn-lg btn-block w-100 mt-2">Contact Us</a>
 
             </div>
+
         </div>
     </div>
 </div>

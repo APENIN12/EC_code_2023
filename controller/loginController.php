@@ -50,3 +50,45 @@ function logout()
 
     header('location: index.php');
 }
+
+/****************************
+ * ----- TO GO TO the Home Page  
+ * (FUNCTION) -----
+ ****************************/
+
+function previous()
+{
+    header('location: view/loginView.php');
+}
+
+/****************************
+ * ----- TO GO TO the contact 
+ * demand (FUNCTION) -----
+ ****************************/
+
+function contactForm()
+    {
+        header('location: view/contactForm.php');
+    }
+
+/****************************
+ * ----- TO GO TO the 
+ * registration page  (FUNCTION) -----
+ ****************************/
+
+ function signIn()
+ {
+     header('location: view/signInForm.php');
+ }
+
+
+
+ /****************************
+ * ----- TO GO TO the 
+ *  createAServer page  (FUNCTION) -----
+ ****************************/
+
+ function  createAServer()
+ {
+     header('location: view/ createAServer.php');
+ }

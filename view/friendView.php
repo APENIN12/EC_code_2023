@@ -9,8 +9,10 @@
                 <div class="col-10">
                     <h2><i class="bi-people-fill mx-2"></i>Friends</h2>
                 </div>
-                <div class="col-2 align-self-center d-flex justify-content-end">
+                <div class="col-4 align-self-center d-flex justify-content-end">
                     <a href="/index.php?action=friend&sub_action=add_friend" class="btn btn-success">Add a Friend</a>
+                    </btn>
+                    <a href="/index.php?action=createAServer" class="btn btn-success">Create a server</a>
                     </btn>
                 </div>
             </div>

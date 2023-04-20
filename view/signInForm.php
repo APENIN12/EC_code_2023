@@ -30,7 +30,7 @@
 
                 </div>
                 <div class="mb-3">
-                    <a class="text-dark mt-3" href="loginView.php"> ⬅️ Previous page</a>
+                    <a class="text-dark mt-3" href="/index.php?action=previous"> ⬅️ Previous page</a> 
                 </div>
             
 

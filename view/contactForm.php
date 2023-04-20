@@ -25,7 +25,7 @@
                     <button type="submit" class="btn btn-primary btn-lg btn-block w-100">Submit</button>
                 </form>
                 <div class=" mt-5">
-                <a class="text-dark mt-5" href="loginView.php"> ⬅️ Login page</a>
+                <a class="text-dark mt-5" href="/index.php?action=previous"> ⬅️ Login page</a>
             </div>
          </div>
     </div>
