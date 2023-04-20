@@ -78,6 +78,5 @@ if(isset($_POST['messageId'])) {
 <?php $content = ob_get_clean(); ?>
 <?php require('searchbar.php'); ?>
 <?php require('base.php'); ?>
-
 <?php require('logout.php'); ?>
 

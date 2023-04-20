@@ -20,9 +20,9 @@ if (isset($_GET['action'])) {
             }
             break;
 
-            case 'previous':
-                previous();
-                break;
+        case 'previous':
+            previous();
+            break;
 
         case 'logout':
             logout();
@@ -61,10 +61,7 @@ if (isset($_GET['action'])) {
             createAServer();
             break;
 
-            
     }
-   
- 
 } else {
     $user_id = $_SESSION['user_id'] ?? false;
 

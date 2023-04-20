@@ -21,9 +21,9 @@ function loginPage()
 
 function login($post)
 {
-
     $email = $post['email'];
     $password = $post['password'];
+    // code uses the SHA-256 algorithm to hash the value of $password
     $passwordcode = hash('sha256', $password);
     $user_data = User::getUserByCredentials($email, $passwordcode);
 
@@ -78,10 +78,8 @@ function contactForm()
 
  function signIn()
  {
-     header('location: view/signInForm.php');
+    header('location: view/signInForm.php');
  }
-
-
 
  /****************************
  * ----- TO GO TO the 
@@ -90,5 +88,5 @@ function contactForm()
 
  function  createAServer()
  {
-     header('location: view/ createAServer.php');
+    header('location: view/ createAServer.php');
  }

@@ -2,9 +2,12 @@
 ob_start();
 session_start();
 
+ //***************************************************
+ //* ----- page to say welcome to our new user  -----
+ //****************************************************
+
 // decode url
 $pseudo = urldecode($_GET['pseudo']);
-
 ?>
 
 <div class="container-fluid d-flex h-100 characterBackground">

@@ -1,6 +1,9 @@
 <?php ob_start(); ?> 
 
-<!-- login page -->
+<!-- /*************************************
+ * ----- login page  -----
+ **************************************/ -->
+
 <div class="container-fluid text-dark d-flex h-100 characterBackground">
     <div class="row align-self-center w-100">
         <div class="col-4 mx-auto auth-container">
@@ -27,19 +30,15 @@
 
                 <div class="mb-3">
                     <button type="submit" class="btn btn-warning btn-lg btn-block w-100 mt-3">Create 🚀</button>
-
                 </div>
+
                 <div class="mb-3">
                     <a class="text-dark mt-3" href="/index.php?action=previous"> ⬅️ Previous page</a> 
                 </div>
-            
-
             </form>
-            
         </div>
     </div>
 </div>
 
 <?php $content = ob_get_clean(); ?> 
-
 <?php require( __DIR__ . '/base.php'); ?>

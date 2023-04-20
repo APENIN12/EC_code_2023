@@ -20,7 +20,6 @@ $newpseudo= $pseudo.'#'.$hash;
 //we call the model with the function addNewUser : return false OR id 
 $user_data = User::addNewUser($email,$newpseudo,$hashpassword);
 
-
 //check if is not the same user 
 if ($user_data !== false) {
     // encode url : If we don't encode the new username, it might mistake it for an anchor and cause some chaos!

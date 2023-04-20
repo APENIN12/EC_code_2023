@@ -12,12 +12,10 @@
                         number</label>
                     <input type="email" class="form-control" id="email" name="email"/>
                 </div>
-
                 <div class="mb-3">
                     <label for="password" class="form-label small text-dark text-uppercase">Password</label>
                     <input type="password" class="form-control" id="password" name="password"/>
                 </div>
-
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary btn-lg btn-block w-100">Login</button>
                 </div>
@@ -25,9 +23,7 @@
             <div class="mb-3">
                 <a href="/index.php?action=signIn" class="btn btn-warning btn-lg btn-block w-100 mt-5">Join Us!</a>
                 <a href="/index.php?action=contactForm" class="btn btn-warning btn-lg btn-block w-100 mt-2">Contact Us</a>
-
             </div>
-
         </div>
     </div>
 </div>
